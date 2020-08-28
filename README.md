@@ -13,7 +13,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	zh "github.com/luvinci/validate-zh"
+	zh "github.com/luvinci/validator-zh"
 )
 
 type User struct {
