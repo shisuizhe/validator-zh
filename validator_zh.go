@@ -32,9 +32,9 @@ func Validate(i interface{}) []string {
 		return name
 	})
 
-	// i18n
-	e := en.New()
-	universalTranslator := ut.New(e, e, zh.New())
+	enT := en.New() // 英文翻译器
+	zhT := zh.New() // 中文翻译器
+	universalTranslator := ut.New(enT, enT, zhT)
 	translator, found := universalTranslator.GetTranslator("zh")
 	if found {
 		err := zhTranslation.RegisterDefaultTranslations(validate, translator)
